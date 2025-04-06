@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>website1</title>
+  <style>
+  .navbar{
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     padding: 15px 20px;
+     background-color: #f0f0f0;
+     color:black;
+   }
+.navbar ul{
+  list-style-type:none;
+  display:flex;
+}
+  .navbar ul li{
+    margin: 0 10px;
+  }
+  .navbar ul li a{
+    color:black;
+    text-decoration: none;
+    transition-duration:.5s;
+  }
+  li a:hover{
+    background-color:lightgray;
+    font-size:25px;
+  }
+  
+  .navi{
+    text-align:center;
+    padding: 100px 20px;
+    background-color: #f0f0f0;
+  }
+  .navi h1{
+    font-size: 2cm;
+    margin-bottom: 20px;
+  }
+  .navi p {
+    font-size: 30px;
+    margin-bottom:30px
+  }
+  .btn{
+    display:inside-block;
+    padding: 10px 20px;
+    background-color:#333;
+    color:#fff;
+    text-decoration: none;
+    border-radius:5px 10px;
+  }
+  
+  .card-group{
+    display:flex;
+    gap:15px; 
+align-items: center;
+justify-content: center;    
+  }
+ 
+  .card{
+    width:300px;
+    height:400px;
+    border-radius:16px;
+    overflow:hidden;
+    position: relative;
+    transition: 0.05s;
+    cursor:pointer;
+  }
+  .card img{
+    width:100%;
+    height:100%;
+ object-fit: cover;
+    
+    margin:bottom;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  .card .layer{
+    background: linear-gradient(to top,rgba(0,0,0,1),rgba(0,0,0,0));
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: 65%;
+    opacity:0;
+    transition: 0.3s;
+  }
+  .card .info{
+    position:absolute;
+    bottom:-50%;
+    padding: 15px;
+    opacity: 0;
+    transition: 0.5s bottom, 1.75s opacity;
+    color:white;
+  }
+  .info p{
+    font-size:12px;
+    margin-top:3px;
+    color:white;
+  }
+  .info buton{
+    background:#490CCC;
+    border: none;
+    padding: 8px 12px;
+    font-weight:bold;
+    border-radius: 8px;
+    margin-top:8px;
+  }
+  .card:hover,
+  .card:hover img,
+  .card:hover layer{
+    transform: scale(1.1);
+  }
+  .card:hover > .layer{
+    opacity:1;
+  }
+  .card:hover > .info{
+    bottom: 0;
+    opacity: 1;
+  }
+  .card-group:hover > .card:not(:hover){
+    filter:blur(5px);
+  }
+  .bot{
+    text-align:center;
+    font-size:50px;
+  }
+     p{
+       text-align:center;
+     }
+   .footer{ 
+    background-color:#333;
+    text-align:center;
+    font-size: 15px;
+    padding: 10px;
+    color:white;
+   }
+  </style>
+</head>
+
+<body>
+ 
+  <header class="bg-white shadow-md sticky top-0 z-10">
+    <nav class="navbar">     
+    <h2>WELCOME TO BREW HAVEN</h2>
+      <ul> 
+        <li style="width:150px;"> <a href="">Back</a></li>
+        <li style="width:150px;"> <a href="#menu"> Menu</a></li>
+        <li style="width:150px;"> <a href="#about">About</a></li> 
+        <li style="width:150px;"> <a href="#contact"> Contact</a></li>
+      </ul>
+  </nav>
+  </header><br> <br>
+  <main>
+    <section class="navi"> 
+      <h1> WELCOME TO BREW HAVEN</h1>
+      <p> your daily dose awaits</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </section>
+  </main><hr>
+  
+  <section id="menu">
+    <div class="card-group"> 
+    <div class="card"> <br> <br> 
+      <img src="icedmacchiato.jpg" >
+      <div class="layer"></div>
+      <div class="info">
+        <h1> Iced Caramel Macchiato</h1>
+        <p> 
+          An iced caramel macchiato typically consists of espresso, milk, vanilla syrup, ice and caramel sauce. Two espresso shots are layered over vanilla syrup, milk and ice. The drink is then topped with caramel sauce. ​ The result is a refreshing, sweet coffee drink with a layered appearance.
+        </p>
+    </div>
+  </div>
+    <div class="card"> <br> <br> 
+      <img src="icedamericano.jpg">
+      <div class="layer"></div>
+      <div class="info">
+        <h1> Iced Americano</h1>
+        <p>
+          An iced Americano is a refreshing coffee drink made by pouring freshly brewed espresso shots over ice and topping with cold water, resulting in a bold, espresso-forward taste that's smooth and revitalizing
+        </p>
+    </div>
+    </div>
+     <div class="card"> <br> <br> 
+      <img src="iced cappuccino.jpg">
+      <div class="layer"></div>
+      <div class="info">
+        <h1>Iced Cappuccino</h1>
+        <p> 
+          An iced cappuccino is a cold coffee beverage made by layering espresso and foamed milk over ice, offering a balanced, refreshing drink with a strong espresso flavor. 
+        </p>
+      </div>
+  </div>
+    <div class="card"> <br> <br> 
+      <img src="Iced_Latte.jpg">
+      <div class="layer"></div>
+      <div class="info">
+        <h1>Iced Latte </h1>
+        <p> 
+          An iced latte is a chilled coffee beverage that's made by mixing espresso with chilled milk, simple syrup, and ice cubes </p>
+      </div>
+  </div>
+  </div>
+    <div class="card-group"> 
+    <div class="card"> <br> <br> 
+      <img src="icedaffogato.jpg">
+      <div class="layer"></div>
+      <div class="info">
+        <h1>Iced Affogato</h1>
+        <p> An iced affogato is a variation of the classic Italian dessert where a scoop of ice cream is "drowned" in a chilled espresso, resulting in a refreshing and flavorful combination of cold and bitter 
+        </p>
+      </div>
+  </div>
+    <div class="card"> <br> <br> 
+      <img src="icedagnola.jpg">
+      <div class="layer"></div>
+      <div class="info">
+        <h1>Iced Dagnola</h1>
+        <p> 
+          Dalgona coffee, also known as hand beaten coffee, is a beverage originating from Macau made by whipping equal parts instant coffee powder, sugar, and hot water until it becomes creamy and then adding it to cold or hot milk.
+        </p>
+      </div>
+  </div>
+    <div class="card"> <br> <br> 
+      <img src="mocha.jpg">
+      <div class="layer"></div>
+      <div class="info">
+        <h1>Iced Mocha</h1>
+        <p> 
+          An iced mocha is a cold coffee beverage combining espresso or strong brewed coffee, milk, chocolate syrup or powder, and ice, often topped with whipped cream. 
+        </p>
+      </div>
+  </div>
+    <div class="card"> <br> <br> 
+      <img src="icedcaramel.jpg">
+      <div class="layer"></div>
+      <div class="info">
+        <h1>Iced Caramel</h1>
+        <p> 
+          Iced caramel" generally refers to a cold beverage, often a coffee drink, that is sweetened with caramel and served over ice. 
+        </p>
+      </div>
+      </div>
+  </div>
+  </section><hr>
+   <br> <br>
+  
+  <section id="about">
+     <h2 class="bot"> About Brew Haven </h2>
+  <p>
+Founded in 2020, Brew Haven is more than just a coffee shop — it’s a place to connect, unwind, and savor the little things.<br> We serve ethically-sourced beans brewed with care by passionate baristas.</\p>
+  <hr>
+  <br>
+  </section>
+  <section id="contact">
+    <h2 class="bot"> Contact </h2>
+
+  
+  <h3 style="text-align:center;"> ORDER NOW</h3>
+  <p> 123 Bean Street, Nueva Ecija, Philippines<br>
+    Email: hello@brewhaven.com<br>
+    Phone: 09123456789</p><br>
+    <a href="https://www.facebook.com/dreamchristine.deleon "><img src="fb.png" style="width:25px;height10px;margin-left:649px;"></a> 
+      <a href="https://www.instagram.com/_vvvvdisi?igsh=MXd3Nnc2enBwbHB3Ng=="> <img src="ig.png" style="width:25px;height10px;"></a>
+  </section><br>
+  <div class="footer">&copy; 2025 Coffetea. All rights reserved.</div>
+</body>
+</html>
